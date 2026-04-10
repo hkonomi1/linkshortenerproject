@@ -6,23 +6,23 @@ This version has breaking changes — APIs, conventions, and file structure may 
 
 # Agent Instructions — Link Shortener Project
 
-This is a **Next.js 16 App Router** project. The instructions below are authoritative. Detailed standards are split across the files listed in the index. **Read the relevant doc file before writing code in that domain.**
+This is a **Next.js 16 App Router** project. The instructions below are authoritative. Detailed standards are split across the files listed in the index.
+
+> ⚠️ **MANDATORY**: You MUST use the `read_file` tool to read the full contents of every relevant `/docs/*.md` file **before writing a single line of code** in that domain. Do not rely on memory, training data, or assumptions. Skipping this step will produce incorrect code.
 
 ## Document Index
 
-| Topic | File |
-|---|---|
-| Tech stack overview | [docs/tech-stack.md](docs/tech-stack.md) |
-| Project structure & naming | [docs/project-structure.md](docs/project-structure.md) |
-| Next.js App Router conventions | [docs/next.md](docs/next.md) |
-| Components & styling | [docs/components.md](docs/components.md) |
-| Database (Drizzle + Neon) | [docs/database.md](docs/database.md) |
-| Authentication (Clerk v7) | [docs/authentication.md](docs/authentication.md) |
-| TypeScript rules | [docs/typescript.md](docs/typescript.md) |
+> 🚨 **STOP. Before generating ANY code, you MUST read the full contents of every relevant file below using `read_file`.** These files contain authoritative, project-specific rules that override anything from your training data. There are NO exceptions.
+
+For detailed guidelines on specific topics, refer to the modular documentation in the `/docs` directory:
+
+- **Authentication** → [docs/auth.md](docs/auth.md) — Clerk setup, protected routes, modal sign-in/sign-up, auth state helpers.
+- **UI Components** → [docs/ui.md](docs/ui.md) — shadcn/ui only, adding components via CLI, theming, icons.
+
 
 ## Non-Negotiable Rules
 
-1. **Read the relevant `docs/` file before touching any domain.** Assumptions based on older Next.js, Clerk, Drizzle, or Tailwind versions will be wrong.
+1. **You MUST read the full contents of the relevant `docs/` file using `read_file` before touching any domain — no exceptions.** Assumptions based on older Next.js, Clerk, Drizzle, or Tailwind versions will be wrong. Failure to read the doc first is a critical process violation.
 2. **App Router only.** No Pages Router. No `getStaticProps`, `getServerSideProps`, or `pages/` directory.
 3. **Server Components by default.** Add `"use client"` only when required. See [docs/next.md](docs/next.md).
 4. **`@/*` imports only.** No relative `../../` imports.
@@ -32,3 +32,4 @@ This is a **Next.js 16 App Router** project. The instructions below are authorit
 8. **Clerk manages all auth.** Do not implement custom session handling or roll your own middleware for auth.
 9. **No new dependencies without justification.** The stack is intentional — check if an existing dependency already solves the problem before adding one.
 10. **Run `npm run lint` after every change.** Do not leave lint errors.
+11. **shadcn/ui for all UI.** Never create custom component primitives. See [docs/ui.md](docs/ui.md).

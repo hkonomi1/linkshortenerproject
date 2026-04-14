@@ -31,7 +31,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} dark h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <ClerkProvider>
+        <ClerkProvider signInForceRedirectUrl="/dashboard" signUpForceRedirectUrl="/dashboard">
           <header className="flex justify-end items-center p-4 gap-4 h-16">
             <Show when="signed-out">
               <SignInButton mode="modal">

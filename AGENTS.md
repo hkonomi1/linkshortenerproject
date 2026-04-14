@@ -33,3 +33,4 @@ For detailed guidelines on specific topics, refer to the modular documentation i
 9. **No new dependencies without justification.** The stack is intentional — check if an existing dependency already solves the problem before adding one.
 10. **Run `npm run lint` after every change.** Do not leave lint errors.
 11. **shadcn/ui for all UI.** Never create custom component primitives. See [docs/ui.md](docs/ui.md).
+12. **NEVER use `middleware.ts`.** `middleware.ts` is deprecated in the version of Next.js used by this project (Next.js 16). Use `proxy.ts` instead for any middleware/proxy logic.

@@ -8,21 +8,9 @@ This version has breaking changes — APIs, conventions, and file structure may 
 
 This is a **Next.js 16 App Router** project. The instructions below are authoritative. Detailed standards are split across the files listed in the index.
 
-> ⚠️ **MANDATORY**: You MUST use the `read_file` tool to read the full contents of every relevant `/docs/*.md` file **before writing a single line of code** in that domain. Do not rely on memory, training data, or assumptions. Skipping this step will produce incorrect code.
-
-## Document Index
-
-> 🚨 **STOP. Before generating ANY code, you MUST read the full contents of every relevant file below using `read_file`.** These files contain authoritative, project-specific rules that override anything from your training data. There are NO exceptions.
-
-For detailed guidelines on specific topics, refer to the modular documentation in the `/docs` directory:
-
-- **Authentication** → [docs/auth.md](docs/auth.md) — Clerk setup, protected routes, modal sign-in/sign-up, auth state helpers.
-- **UI Components** → [docs/ui.md](docs/ui.md) — shadcn/ui only, adding components via CLI, theming, icons.
-
-
 ## Non-Negotiable Rules
 
-1. **You MUST read the full contents of the relevant `docs/` file using `read_file` before touching any domain — no exceptions.** Assumptions based on older Next.js, Clerk, Drizzle, or Tailwind versions will be wrong. Failure to read the doc first is a critical process violation.
+1. Assumptions based on older Next.js, Clerk, Drizzle, or Tailwind versions will be wrong. Failure to read the instructions first is a critical process violation.
 2. **App Router only.** No Pages Router. No `getStaticProps`, `getServerSideProps`, or `pages/` directory.
 3. **Server Components by default.** Add `"use client"` only when required. See [docs/next.md](docs/next.md).
 4. **`@/*` imports only.** No relative `../../` imports.

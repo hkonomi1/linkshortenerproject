@@ -1,3 +1,7 @@
+---
+description: This file describes the UI component rules for the project. Read this before implementing or modifying any UI components.
+---
+
 # UI Components — shadcn/ui
 
 All UI in this project is built exclusively with **shadcn/ui**. No custom component primitives may be created.

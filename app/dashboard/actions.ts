@@ -10,7 +10,10 @@ const createLinkSchema = z.object({
     .string()
     .min(1, "Slug is required")
     .max(12, "Slug must be 12 characters or fewer")
-    .regex(/^[a-zA-Z0-9-_]+$/, "Slug may only contain letters, numbers, hyphens, and underscores"),
+    .regex(
+      /^[a-zA-Z0-9-_]+$/,
+      "Slug may only contain letters, numbers, hyphens, and underscores",
+    ),
 });
 
 type CreateLinkInput = z.infer<typeof createLinkSchema>;
@@ -38,7 +41,10 @@ const slugSchema = z
   .string()
   .min(1, "Slug is required")
   .max(12, "Slug must be 12 characters or fewer")
-  .regex(/^[a-zA-Z0-9-_]+$/, "Slug may only contain letters, numbers, hyphens, and underscores");
+  .regex(
+    /^[a-zA-Z0-9-_]+$/,
+    "Slug may only contain letters, numbers, hyphens, and underscores",
+  );
 
 const updateLinkSchema = z.object({
   id: z.number().int().positive(),

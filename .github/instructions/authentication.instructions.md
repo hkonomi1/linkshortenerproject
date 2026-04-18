@@ -81,10 +81,10 @@ import { SignInButton, SignUpButton } from "@clerk/nextjs";
 
 ## Reading Auth State
 
-| Context | API |
-|---|---|
+| Context                          | API                                                        |
+| -------------------------------- | ---------------------------------------------------------- |
 | Server Component / Route Handler | `import { auth, currentUser } from "@clerk/nextjs/server"` |
-| Client Component | `useAuth()`, `useUser()` from `@clerk/nextjs` |
+| Client Component                 | `useAuth()`, `useUser()` from `@clerk/nextjs`              |
 
 ```ts
 // Server Component example

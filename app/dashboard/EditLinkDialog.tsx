@@ -89,11 +89,12 @@ export function EditLinkDialog({ id, slug, url }: EditLinkDialogProps) {
                 required
                 disabled={isPending}
               />
-              <p className="text-xs text-muted-foreground">
-                Up to 12 characters. Letters, numbers, hyphens, and underscores only.
+              <p className="text-muted-foreground text-xs">
+                Up to 12 characters. Letters, numbers, hyphens, and underscores
+                only.
               </p>
             </div>
-            {error && <p className="text-sm text-destructive">{error}</p>}
+            {error && <p className="text-destructive text-sm">{error}</p>}
             <div className="flex justify-end gap-2">
               <Button
                 type="button"

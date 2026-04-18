@@ -1,4 +1,11 @@
-import { index, integer, pgTable, text, timestamp, varchar } from "drizzle-orm/pg-core";
+import {
+  index,
+  integer,
+  pgTable,
+  text,
+  timestamp,
+  varchar,
+} from "drizzle-orm/pg-core";
 
 export const linksTable = pgTable(
   "links",
@@ -13,5 +20,5 @@ export const linksTable = pgTable(
       .defaultNow()
       .$onUpdateFn(() => new Date()),
   },
-  (table) => [index("links_user_id_idx").on(table.userId)]
+  (table) => [index("links_user_id_idx").on(table.userId)],
 );

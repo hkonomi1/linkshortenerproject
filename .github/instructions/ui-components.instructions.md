@@ -33,11 +33,11 @@ Browse available components at [https://ui.shadcn.com/docs/components](https://u
 
 ## Project Configuration (`components.json`)
 
-| Key | Value |
-|-----|-------|
-| Style | `base-nova` |
-| Base colour | `neutral` |
-| CSS variables | `true` |
-| Icon library | `lucide` |
-| RSC | `true` |
+| Key             | Value             |
+| --------------- | ----------------- |
+| Style           | `base-nova`       |
+| Base colour     | `neutral`         |
+| CSS variables   | `true`            |
+| Icon library    | `lucide`          |
+| RSC             | `true`            |
 | Component alias | `@/components/ui` |

@@ -57,12 +57,14 @@ export function DeleteLinkDialog({ id, slug }: DeleteLinkDialogProps) {
           <DialogHeader>
             <DialogTitle>Delete short link</DialogTitle>
           </DialogHeader>
-          <p className="text-sm text-muted-foreground">
+          <p className="text-muted-foreground text-sm">
             Are you sure you want to delete{" "}
-            <span className="font-mono font-medium text-foreground">{slug}</span>?
-            This action cannot be undone.
+            <span className="text-foreground font-mono font-medium">
+              {slug}
+            </span>
+            ? This action cannot be undone.
           </p>
-          {error && <p className="text-sm text-destructive">{error}</p>}
+          {error && <p className="text-destructive text-sm">{error}</p>}
           <div className="flex justify-end gap-2">
             <Button
               variant="outline"

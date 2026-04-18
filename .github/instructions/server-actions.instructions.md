@@ -79,12 +79,12 @@ export async function createLinkAction(input: ActionInput) {
 
 ## Checklist
 
-| Requirement | Detail |
-|---|---|
-| File named `actions.ts` | Colocated with the calling Client Component |
-| `"use server"` directive | At the top of every `actions.ts` file |
-| Explicit TypeScript input types | No `FormData`, no `any` |
-| Zod validation | Applied before any logic runs |
-| Auth check via `auth()` | Before any database operation |
-| DB via `/data` helpers only | No raw Drizzle queries inside actions |
+| Requirement                         | Detail                                      |
+| ----------------------------------- | ------------------------------------------- |
+| File named `actions.ts`             | Colocated with the calling Client Component |
+| `"use server"` directive            | At the top of every `actions.ts` file       |
+| Explicit TypeScript input types     | No `FormData`, no `any`                     |
+| Zod validation                      | Applied before any logic runs               |
+| Auth check via `auth()`             | Before any database operation               |
+| DB via `/data` helpers only         | No raw Drizzle queries inside actions       |
 | Return `{ error }` or `{ success }` | Never throw — always return a result object |

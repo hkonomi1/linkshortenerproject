@@ -20,7 +20,7 @@ export default async function DashboardPage() {
 
   return (
     <main className="container mx-auto py-8">
-      <div className="flex items-center justify-between mb-6">
+      <div className="mb-6 flex items-center justify-between">
         <h1 className="text-2xl font-bold">Your Links</h1>
         <CreateLinkDialog />
       </div>
@@ -41,11 +41,13 @@ export default async function DashboardPage() {
               <TableRow key={link.id}>
                 <TableCell className="font-mono">{link.slug}</TableCell>
                 <TableCell className="max-w-xs truncate">{link.url}</TableCell>
-                <TableCell>
-                  {link.createdAt.toLocaleDateString()}
-                </TableCell>
+                <TableCell>{link.createdAt.toLocaleDateString()}</TableCell>
                 <TableCell className="text-right">
-                  <EditLinkDialog id={link.id} slug={link.slug} url={link.url} />
+                  <EditLinkDialog
+                    id={link.id}
+                    slug={link.slug}
+                    url={link.url}
+                  />
                   <DeleteLinkDialog id={link.id} slug={link.slug} />
                 </TableCell>
               </TableRow>

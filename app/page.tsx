@@ -33,22 +33,21 @@ const features = [
 
 export default function HomePage() {
   return (
-    <div className="flex flex-col flex-1">
+    <div className="flex flex-1 flex-col">
       {/* Hero */}
-      <section className="flex flex-col flex-1 items-center justify-center gap-8 px-6 py-24 text-center">
-        <div className="flex items-center gap-2 rounded-full border border-border bg-muted px-4 py-1.5 text-sm text-muted-foreground">
+      <section className="flex flex-1 flex-col items-center justify-center gap-8 px-6 py-24 text-center">
+        <div className="border-border bg-muted text-muted-foreground flex items-center gap-2 rounded-full border px-4 py-1.5 text-sm">
           <Zap className="h-3.5 w-3.5" />
           Fast, reliable URL shortening
         </div>
 
-        <h1 className="max-w-2xl text-5xl font-bold tracking-tight text-foreground sm:text-6xl">
-          Shorten links.{" "}
-          <span className="text-primary/80">Share smarter.</span>
+        <h1 className="text-foreground max-w-2xl text-5xl font-bold tracking-tight sm:text-6xl">
+          Shorten links. <span className="text-primary/80">Share smarter.</span>
         </h1>
 
-        <p className="max-w-xl text-lg leading-relaxed text-muted-foreground">
-          Turn any long URL into a short, trackable link. Monitor clicks,
-          manage your links, and share with confidence — all in one place.
+        <p className="text-muted-foreground max-w-xl text-lg leading-relaxed">
+          Turn any long URL into a short, trackable link. Monitor clicks, manage
+          your links, and share with confidence — all in one place.
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-3">
@@ -65,7 +64,10 @@ export default function HomePage() {
             </SignInButton>
           </Show>
           <Show when="signed-in">
-            <Link href="/dashboard" className={cn(buttonVariants({ size: "lg" }), "min-w-36")}>
+            <Link
+              href="/dashboard"
+              className={cn(buttonVariants({ size: "lg" }), "min-w-36")}
+            >
               Go to Dashboard
             </Link>
           </Show>
@@ -73,9 +75,9 @@ export default function HomePage() {
       </section>
 
       {/* Features */}
-      <section className="border-t border-border bg-muted/30 px-6 py-20">
+      <section className="border-border bg-muted/30 border-t px-6 py-20">
         <div className="mx-auto max-w-5xl">
-          <h2 className="mb-12 text-center text-3xl font-semibold tracking-tight text-foreground">
+          <h2 className="text-foreground mb-12 text-center text-3xl font-semibold tracking-tight">
             Everything you need to manage your links
           </h2>
 
@@ -84,15 +86,15 @@ export default function HomePage() {
               <div
                 key={title}
                 className={cn(
-                  "flex flex-col gap-4 rounded-xl border border-border bg-card p-6",
-                  "transition-shadow hover:shadow-md"
+                  "border-border bg-card flex flex-col gap-4 rounded-xl border p-6",
+                  "transition-shadow hover:shadow-md",
                 )}
               >
-                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
-                  <Icon className="h-5 w-5 text-primary" />
+                <div className="bg-primary/10 flex h-10 w-10 items-center justify-center rounded-lg">
+                  <Icon className="text-primary h-5 w-5" />
                 </div>
-                <h3 className="font-semibold text-card-foreground">{title}</h3>
-                <p className="text-sm leading-relaxed text-muted-foreground">
+                <h3 className="text-card-foreground font-semibold">{title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
                   {description}
                 </p>
               </div>
@@ -102,7 +104,7 @@ export default function HomePage() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-border px-6 py-6 text-center text-sm text-muted-foreground">
+      <footer className="border-border text-muted-foreground border-t px-6 py-6 text-center text-sm">
         © {new Date().getFullYear()} LinkShortener. All rights reserved.
       </footer>
     </div>
